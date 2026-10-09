@@ -1,4 +1,4 @@
--keep class noappzygote.blocker.Entry { *; }
+-keep class com.kdjdjski.Entry { *; }
 
 -repackageclasses "noappzygote"
 -allowaccessmodification

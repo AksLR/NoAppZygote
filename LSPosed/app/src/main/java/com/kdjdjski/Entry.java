@@ -1,4 +1,4 @@
-package noappzygote.blocker;
+package com.kdjdjski;
 
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;

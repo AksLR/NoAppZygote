@@ -1,4 +1,4 @@
-package noappzygote.blocker;
+package com.kdjdjski;
 
 import android.util.Log;
 

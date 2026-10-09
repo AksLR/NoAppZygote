@@ -3,20 +3,21 @@ plugins {
 }
 
 android {
-    namespace = "noappzygote.blocker"
+    namespace = "com.kdjdjski"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "noappzygote.blocker"
+        applicationId = "com.kdjdjski"
         minSdk = 29
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.0-diagnostic"
     }
 
     buildTypes {
         release {
             isMinifyEnabled = true
+            signingConfig = signingConfigs.getByName("debug")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

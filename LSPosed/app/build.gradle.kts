@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "noappzygote.blocker"
+    namespace = "com.sevelinfinite.sgameolobal"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "noappzygote.blocker"
+        applicationId = "com.sevelinfinite.sgameolobal"
         minSdk = 29
         targetSdk = 34
         versionCode = 1

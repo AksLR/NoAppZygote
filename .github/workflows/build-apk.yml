@@ -32,14 +32,22 @@ jobs:
       - name: Set up Gradle cache
         uses: gradle/actions/setup-gradle@v4
 
-      - name: Build debug APK
+      - name: Build debug and release APKs
         working-directory: LSPosed
-        run: chmod +x ./gradlew && ./gradlew assembleDebug --stacktrace
+        run: chmod +x ./gradlew && ./gradlew assembleDebug assembleRelease --stacktrace
 
-      - name: Upload APK
+      - name: Upload debug APK
         uses: actions/upload-artifact@v4
         with:
           name: NoAppZygote-LSPosed-debug-apk
           path: LSPosed/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Upload release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: NoAppZygote-LSPosed-release-apk
+          path: LSPosed/app/build/outputs/apk/release/app-release-unsigned.apk
           if-no-files-found: error
           retention-days: 14

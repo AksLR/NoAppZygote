@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "noappzygote.blocker"
+    namespace = "com.kdjdjski"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "noappzygote.blocker"
+        applicationId = "com.kdjdjski"
         minSdk = 29
         targetSdk = 34
         versionCode = 1
